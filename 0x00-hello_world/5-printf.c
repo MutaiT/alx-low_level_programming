@@ -1,4 +1,4 @@
-#include <stdio>
+#include <stdio.h>
 /**
  * main - a program that outputs information followed by a new line
  * Return: 0 (output)
