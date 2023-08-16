@@ -7,18 +7,18 @@
  */
 int main(void)
 {
-        int (i = 0);
-        while (i < 100)
-        i++;
+	int (i = 0);
+	while (i < 100)
+		i++;
 
-        int (j = 0);
-        while (j < 100)
-                ;
-        j++;
+	int (j = 0);
+	while (j < 100)
+		j++;
 
-        putchar("%02d %02d", i, j);
-        if (i != 99 || j != 99)
-                ;
-        putchar(", ");
-        return (0);
+	putchar("%02d %02d", i, j);
+	if (i != 99 || j != 99)
+		;
+
+	putchar(",");
+	return (0);
 }
