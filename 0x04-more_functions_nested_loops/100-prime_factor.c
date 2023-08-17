@@ -31,7 +31,7 @@ int main(void)
 	}
 
 	if (x > 2)
-		highest = y;
+		highest = x;
 
 	printf("%ld\n", highest);
 
