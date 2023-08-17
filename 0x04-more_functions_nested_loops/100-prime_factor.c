@@ -12,13 +12,13 @@ int main(void)
 	long int highest;
 	long int y;
 
-	n = 612852475143;
+	x = 612852475143;
 	highest = -1;
 
 	while (x % 2 == 0)
 	{
 		highest = 2;
-		n /= 2;
+		x /= 2;
 	}
 
 	for (y = 3; y <= sqrt(x); y = y + 2)
@@ -30,7 +30,7 @@ int main(void)
 		}
 	}
 
-	if (n > 2)
+	if (x > 2)
 		highest = y;
 
 	printf("%ld\n", highest);
