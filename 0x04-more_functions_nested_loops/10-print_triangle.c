@@ -5,6 +5,7 @@
  *
  * @size: size of the triangle
  *
+ * Return: 0 Great
  */
 void print_triangle(int size)
 {
