@@ -2,9 +2,9 @@
 #include <stdlib.h>
 #include <time.h>
 /**
- * main - generates keygen
+ * main - A program that generates random valid passwords
  *
- * Return: 0 Always
+ * Return: 0 Everytime
  *
  */
 int main(void)
