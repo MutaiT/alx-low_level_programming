@@ -30,7 +30,7 @@ int _atoi(char *s)
 
 	for (z = tally - extent; z < tally; z++)
 	{
-		w = w + ((*(s + i) - 48) * y);
+		w = w + ((*(s + z) - 48) * y);
 		y /= 10;
 	}
 	return (w * x);
