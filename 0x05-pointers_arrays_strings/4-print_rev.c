@@ -22,7 +22,7 @@ void print_rev(char *s)
 
 	for (tally--; tally >= 0; tally--)
 	{
-		_putchar(s[count]);
+		_putchar(s[tally]);
 	}
 	_putchar('\n');
 }
