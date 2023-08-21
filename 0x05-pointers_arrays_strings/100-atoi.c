@@ -5,7 +5,7 @@
  *
  * @s: Infinite number of characters
  *
- * Return: 0
+ * Return: Anything
  */
 int _atoi(char *s)
 {
