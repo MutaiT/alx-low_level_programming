@@ -10,9 +10,9 @@
 int main(void)
 {
 	int x = 0, y = 0;
-	time_t t;
+	time_t z;
 
-	srand((unsigned int) time(&t));
+	srand((unsigned int) time(&z));
 	while (y < 2772)
 	{
 		x = rand() % 128;
