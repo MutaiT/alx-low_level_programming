@@ -9,35 +9,42 @@
  */
 char *cap_string(char *seq)
 {
-	int x, y, Asc;
+	int x, prec;
 
-	char Separators[] = {',', ';', '.', '!', '?', '"', '(', ')', '{', '}', '\t', ' ', '\n'};
-
-	if (seq[0] > 96 && seq[0] < 123)
-		seq[0] -= 32;
-
-	while (seq[x] != '\0')
+	for (x = 0; seq[x] != '\0'; x++)
 	{
-		if (seq[x] > 96 && seq[x] < 123)
+		prec = x - 1;
+		if (seq[x] >= 'a' && seq[x] <= 'z')
 		{
-			y = 0;
-			Asc = 0;
+			if (x == 0)
+			{
+				seq[x] = seq[x] - 32;
+			}
+			else if (seq[prec] == ' ' || seq[prec] == '\t')
+			{
+				seq[x] = seq[x] - 32;
+			}
+			else if (seq[prec] == '\n' || seq[prec] == ',')
+			{
+				seq[x] = seq[x] - 32;
+			}
+			else if (seq[prec] == ';' || seq[prec] == '.')
+			{
+				seq[x] = seq[x] - 32;
+			}
+			else if (seq[prec] == '!' || seq[prec] == '?')
+			{
+				seq[x] = seq[x] - 32;
+			}
+			else if (seq[prec] == '"' || seq[prec] == '(')
+			{
+				seq[x] = seq[x] - 32;
+			}
+			else if (seq[prec] == ')' || seq[prec] == '{' || seq[prec] == '}')
+			{
+				seq[x] = seq[x] - 32;
+			}
 		}
-
 	}
-	while (Asc == 0 && y < 13)
-	{
-		if (seq[x - 1] == Separators[y])
-		{
-			Asc = 1;
-		}
-		y++;
-	}
-	if (Asc == 1)
-	{
-		seq[x] -= 32;
-	}
-		x++;
-
 	return (seq);
 }
