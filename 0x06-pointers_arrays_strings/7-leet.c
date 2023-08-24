@@ -9,24 +9,20 @@
  */
 char *leet(char *seq)
 {
-	 char leetMap[5][2] = {
-		{'a', '4'}
-		{'e', '3'}
-		{'o', '0'}
-		{'t', '7'}
-		{'l', '1'}
+	int x = 0, y = 0;
+	char leetmap[] = {'4', '3', '1', '0', '7'};
+	char leetupper[] = {'A', 'E', 'L', 'O', 'T'};
+	char leetlower[] = {'a', 'e', 'l', 'o', 't'};
+
+	while (seq[x] != '\0')
+	{
+		for (y = 0; y < 5; y++)
+		{
+			if (seq[x] == leetlower[y] || seq[x] == leetupper[y])
+				seq[x] = leetmap[y];
+		}
+		x++;
 	}
 
-	for (int x = 0; seq[x] != '\0'; x++)
-	{
-		for (int y = 0; y < 5; y++)
-		{
-			if (seq[x] == leetMap[y][0] || seq[x] == (leetMap[y][0] - 32))
-			{
-				str[seq] = leetMap[y][x];
-				break;
-			}
-		}
-	}
 	return (seq);
 }
