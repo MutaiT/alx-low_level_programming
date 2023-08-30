@@ -1,14 +1,14 @@
 include "main.h"
 
 /**
- * is_prime - A function that checks whether an integer is a prime number
+ * prime_number - A function that checks whether an integer is a prime number
  *
  * @n: Number input
  * @x: Number to be checked
  *
  * Return: 1 or 0
  */
-int is_prime(unsigned int n, unsigned int x)
+int prime_number(unsigned int n, unsigned int x)
 {
 	if (n % x == 0)
 	{
@@ -17,7 +17,7 @@ int is_prime(unsigned int n, unsigned int x)
 		else
 			return (0);
 	}
-	return (0 + is_prime(n, x + 1));
+	return (0 + prime_number(n, x + 1));
 }
 /**
  * is_prime_number - Function that checks whether an integer is a prime number
