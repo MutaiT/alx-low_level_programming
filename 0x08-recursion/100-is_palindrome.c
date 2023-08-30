@@ -20,7 +20,7 @@ int _strlen_recursion(char *s)
  *
  * @s: String to be checked
  * @x1: Smallest iterator
- * @n2: Largest iterator
+ * @x2: Largest iterator
  *
  * Return: .
  */
