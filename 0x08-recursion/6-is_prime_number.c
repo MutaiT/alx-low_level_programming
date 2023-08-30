@@ -1,38 +1,32 @@
-include "main.h"
+#include "main.h"
 
 /**
- * prime_number - A function that checks whether an integer is a prime number
+ * prime_number - Function that checks if a number is prime
  *
- * @n: Number input
- * @x: Number to be checked
+ * @x: Base number
+ * @y: The number to be checked
  *
- * Return: 1 or 0
+ * Return: 1 if prime, 0 if otherwise
  */
-int prime_number(unsigned int n, unsigned int x)
+int prime_number(int x, int y)
 {
-	if (n % x == 0)
-	{
-		if (n == x)
-			return (1);
-		else
-			return (0);
-	}
-	return (0 + prime_number(n, x + 1));
+	if (y < 2 || y % x == 0)
+		return (0);
+	else if (x == y - 1)
+		return (1);
+	else if (y > x)
+		return (prime_number(x + 1, y));
+	return (1);
 }
+
 /**
- * is_prime_number - Function that checks whether an integer is a prime number
+ * is_prime_number - Runs the function prime_number
  *
- * @n: Number input
+ * @n: Number to be checked
  *
- * Return: 1 or 0
+ * Return: 1 if prime, 0 if otherwise
  */
 int is_prime_number(int n)
 {
-	if (n == 0)
-		return (0);
-	if (n < 0)
-		return (0);
-	if (n == 1)
-		return (0);
-	return (is_prime(n, 2));
+	return (prime_number(2, n));
 }
