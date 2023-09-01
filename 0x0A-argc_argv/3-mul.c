@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 /**
  * main - Multiplies two numbers
@@ -13,40 +14,22 @@ int main(int argc, char *argv[])
 	int num1 = 0, num2 = 0, result = 0;
 	int i, j;
 
+	/* Check if there are exactly two arguments */
 	if (argc != 3)
 	{
 		printf("Error\n");
 		return (1);
 	}
-	for (i = 0; argv[1][1] != '0'; i++)
-	{
-		if (argv[1][i] >= '0' && argv[1][i] <= '9')
-		{
-			num1 = num1 * 10 + (argv[1][i] - '0';
-		}
-		else
-		{
-			printf("Error\n");
-			return (1);
-		}
-	}
+	/* Convert the argument strings to integers */
+	num1 = atoi(argv[1]);
+	num2 = atoi(argv[2]);
 
-	for (j = 0; argv[2][j] != '\0'; j++)
-	{
-		if (argv[2][j] >= '0' && argv[2][j] <= '9')
-		{
-			num2 = num2 * 10 + (argv[2][j] - '0';
-		}
-		else
-		{
-			printf("Error\n");
-			return (1);
-		}
-	}
-
+	/* Perform multiplication */
 	result = num1 * num2;
 
+	/* Print the result followed by a new line */
 	printf("%d\n", result);
 
+	/* Return success code */
 	return (0);
 }
