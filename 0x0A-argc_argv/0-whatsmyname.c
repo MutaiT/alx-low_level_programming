@@ -12,13 +12,13 @@
 
 int main(int argc, char *argv[])
 {
-	if (argc > 0)
+	(void)argc;
 	{
-		_putchar("Program name: %s\n", argv[0]);
+		printf("Program name: %s\n", argv[0]);
 	}
 	else
 	{
-		_putchar("Unable to determine program name.\n");
+		printf("Unable to determine program name.\n");
 	}
 	return (0);
 }
