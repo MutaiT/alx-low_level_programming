@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include "ctype.h"
 
 /**
  * main - Adds positive numbers
@@ -10,34 +11,28 @@
  * Return: 1 or 0 (Success)
  */
 int main(int argc, char *argv[])
-
-	int s;
+{
+	int sum = 0, i, num;
 
 	if (argc < 2)
 	{
-		printf("0\n"); /* No numbers provided, so print 0 */
-		return (0); /* Success */
+		for (i = 1; i < argc; i++)
+		{
+			for (num = 0; argv[i][num]; num++)
+			{
+				if (!isdigit(argv[i][num]))
+				{
+					printf("Error\n");
+					return (1);
+				}
+			}
+			sum += atoi(argv[i]);
+		}
+		printf("%d\n", sum);
 	}
-
-	for (int i = 1; i < argc; i++)
+	else
 	{
-	/* Convert the argument to an integer */
-		int num = atoi(argv[i]);
-
-	/* Check if the conversion was successful */
-		if (num == 0 && argv[i][0] != '0')
-		{
-			printf("Error\n");
-			return (1); /* Conversion error */
-		}
-
-		if (num > 0)
-		{
-			s += num; /* Add the positive number to the sum */
-		}
+		printf("0\n");
 	}
-
-	printf("%d\n", s);
-	return (0); /* Return success */
+	return (0);
 }
-
