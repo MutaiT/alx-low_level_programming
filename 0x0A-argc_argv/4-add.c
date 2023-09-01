@@ -11,7 +11,7 @@
  */
 int main(int argc, char *argv[])
 
-	int sum;
+	int s;
 
 	if (argc < 2)
 	{
@@ -33,11 +33,11 @@ int main(int argc, char *argv[])
 
 		if (num > 0)
 		{
-			sum += num; /* Add the positive number to the sum */
+			s += num; /* Add the positive number to the sum */
 		}
 	}
 
-	printf("%d\n", sum);
+	printf("%d\n", s);
 	return (0); /* Return success */
 }
 
