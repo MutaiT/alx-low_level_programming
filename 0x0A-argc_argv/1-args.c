@@ -8,7 +8,7 @@
  *
  * Return: 0 Great
  */
-int main(int argc, char *argv[])
+int main(int argc, char *argv[]__attribute__((unused)))
 {
 	int i = argc - 1;  /* Calculate the number of arguments */
 
