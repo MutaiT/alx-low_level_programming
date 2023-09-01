@@ -11,8 +11,7 @@
  */
 int main(int argc, char *argv[])
 {
-	int num1 = 0, num2 = 0, result = 0;
-	int i, j;
+	int num1, num2, result;
 
 	/* Check if there are exactly two arguments */
 	if (argc != 3)
