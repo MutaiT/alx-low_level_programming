@@ -11,42 +11,42 @@
  */
 int main(int argc, char *argv[])
 {
-	int cents, coins, coin_count, i;
+	int coins, i;
 
-	/* We declare an array called "coins" with the coin denominations */
-	coins[] = {25, 10, 5, 2, 1};
-	coin_count = 0;
+	i = 0;
 
-	/* Check if the number of arguments is not exactly 1 */
-	if (argc < 2)
+	if (argc == 1 || argc > 2)
 	{
-	/* If the conditiion is met, print "Error" followed by a new line */
 		printf("Error\n");
 		return (1);
 	}
+	coins = atoi(argv[1]);
 
-	/* Convert the argument provided by the user to integer "cents" */
-	cents = atoi(argv[1]);
-
-	/* We check if the value of the variable "cents" is negative */
-	if (cents < 0)
+	while (coins > 0)
 	{
-	/* If "cents" is negative we print 0 */
-		printf("0\n");
-		return (0);
-	}
-
-	/* Iterate through available coin denominations */
-	for (i = 0; i < 5; i++)
-	{
-		while (cents >= coins[i])
+		if (coins >= 25)
 		{
-			cents -= coins[i];
-			coin_count++;
+			coins = coins - 25;
 		}
+		else if (coins >= 10)
+		{
+			coins = coins - 10;
+		}
+		else if (coins >= 5)
+		{
+			coins = coins - 5;
+		}
+		else if (coins >= 2)
+		{
+			coins = coins - 2;
+		}
+		else if (coins >= 1)
+		{
+			coins = coins - 1;
+		}
+		i = i + 1;
 	}
 
-	/* Print the value of "coin_count" */
-	printf("%d\n", coin_count);
+	printf("%d\n", i);
 	return (0);
 }
