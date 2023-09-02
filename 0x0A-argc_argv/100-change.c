@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+
 /**
  * main - Prints number of coins to make change for some money
  *
@@ -10,6 +11,12 @@
  */
 int main(int argc, char *argv[])
 {
+	int cents, coins, coin_count, i;
+
+	/* We declare an array called "coins" with the coin denominations */
+	coins[] = {25, 10, 5, 2, 1};
+	coin_count = 0;
+
 	/* Check if the number of arguments is not exactly 1 */
 	if (argc < 2)
 	{
@@ -19,7 +26,7 @@ int main(int argc, char *argv[])
 	}
 
 	/* Convert the argument provided by the user to integer "cents" */
-	int cents = atoi(argv[1]);
+	cents = atoi(argv[1]);
 
 	/* We check if the value of the variable "cents" is negative */
 	if (cents < 0)
@@ -28,11 +35,6 @@ int main(int argc, char *argv[])
 		printf("0\n");
 		return (0);
 	}
-
-	/* We declare an array called "coins" with the coin denominations */
-	int coins[] = {25, 10, 5, 2, 1};
-	int coin_count = 0;
-	int i;
 
 	/* Iterate through available coin denominations */
 	for (i = 0; i < 5; i++)
