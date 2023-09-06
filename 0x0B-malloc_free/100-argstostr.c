@@ -29,7 +29,7 @@ char *argstostr(int ac, char **av)
 	/* allocate memory space */
 	str_len += (ac + 1);
 	string = malloc(sizeof(char) * str_len);
-	if (str == NULL)
+	if (string == NULL)
 		return (NULL);
 	/* copy arguments to string */
 	for (i = 0; i < ac; i++)
