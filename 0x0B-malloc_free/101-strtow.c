@@ -60,7 +60,7 @@ char **strtow(char *str)
 				break;
 			}
 		}
-		for (j = 0; z <= c; a1++, y++)
+		for (y = 0; z <= c; z++, y++)
 			array[i][y] = str[z];
 		array[i][y] = '\0';
 	}
