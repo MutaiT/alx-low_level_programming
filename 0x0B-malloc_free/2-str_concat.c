@@ -28,7 +28,7 @@ char *str_concat(char *s1, char *s2)
 			x2++;
 	}
 	else if (s2 == NULL)
-		x = 0;
+		x22 = 0;
 
 	/* allocate memory space */
 	array = malloc((sizeof(char) * x1) + (sizeof(char) * x2) + 1);
