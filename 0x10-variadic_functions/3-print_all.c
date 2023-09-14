@@ -102,13 +102,13 @@ void print_all(const char * const format, ...)
 {
 	y = 0;
 
-	while (y < 4 && (*(format + x) != *(funcs[j].symbol)))
+	while (y < 4 && (*(format + x) != *(funcs[y].symbol)))
 		y++;
 
 	if (y < 4)
 	{
 		printf("%s", s);
-		funcs[y].print(args);
+		funcs[y].print(a);
 		s = ", ";
 	}
 
