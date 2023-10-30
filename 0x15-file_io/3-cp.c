@@ -2,13 +2,13 @@
 #include <stdio.h>
 
 /**
- * error_file - Checks if files can be opened.
+ * error_file - Checks if files can be opened
  *
- * @file_from: file_from.
- * @file_to: file_to.
- * @argv: Argument vector.
+ * @file_from: file_from
+ * @file_to: file_to
+ * @argv: Argument vector
  *
- * Return: No return.
+ * Return: No return
  */
 
 void error_file(int file_from, int file_to, char *argv[])
